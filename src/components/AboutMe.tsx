@@ -21,7 +21,7 @@ export const AboutMe = () => {
         <CardContent>
             <p className="text-muted-foreground">
                 {/* Write 1-2 sentences about yourself */}
-                I am a software engineer with a passion for building scalable and efficient web applications.
+                I make and maintain high-performance web applications, sometimes telegram bots and projects of other directions using Python, SQL, Django and DRF. I have done several custom projects for various purposes, as well as implemented some of my own ideas that are still in progress. I enjoy solving complex problems and delivering quality solutions that meet the needs and expectations of the users.
             </p>
         </CardContent>
     </Card>

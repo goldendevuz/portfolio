@@ -8,39 +8,15 @@ import { JobImages } from "@/components/JobImages";
 
 const jobs = [
     {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2020 - Present",
+        role: "Python Backend Development", // TODO: Replace with actual role
+        company: "PDP Academy Inc.", // TODO: Replace with actual company name
+        logo: "/pdp_academy.svg", // TODO: Replace with actual logo
+        duration: "July 2023 - July 2024",
         description:
-            "Lead developer for multiple high-impact projects, mentoring junior developers, and implementing best practices.",
-        link: "https://techinnovators.com",
-        images: [],
-    },
-    {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2018 - 2020",
-        description:
-            "Developed and maintained various client projects, focusing on responsive design and performance optimization.",
-        link: "https://websolutions.com",
+            "I learned web application development, teamwork, and experience in version control.",
+        link: "https://pdp.uz/offline",
         images: [
-            "/devvault.png",
-            "/devvault.png",
-        ],
-    },
-    {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2016 - 2018",
-        description:
-            "Assisted in the development of web applications, gained experience in agile methodologies and version control.",
-        link: "https://startupventures.com",
-        images: [
-            "/devvault.png",
-            "/devvault.png",
+            "/foundation.jpg",
         ],
     },
 ]
@@ -48,7 +24,7 @@ const jobs = [
 export const Experience = () => {
     return (
         <>
-           <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Work Experience</h2>
+           <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Education</h2>
             <Card>
                 <CardContent className="pt-6">
                     <ul className="space-y-8">

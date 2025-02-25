@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 // TODO: Update metadata
 
 export function constructMetadata({
-  title = 'Chris Lonzo', // TODO: Add a custom title
-  description = "I am a software engineer with a passion for building scalable and efficient web applications.", // TODO: Add a custom description
+  title = 'Yunusov Abdulmajid', // TODO: Add a custom title
+  description = "I am a 20 y.o backend engineer with a passion for building scalable and efficient web applications.", // TODO: Add a custom description
   image = '/thumbnail.png', // TODO: Add a custom image
   icons = '/avatar.svg', // TODO: Add a custom icon
   noIndex = false
@@ -28,10 +28,10 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@chrislonzo'
+      creator: '@avengerdev'
     },
     icons,
-    metadataBase: new URL('https://www.chrislonzo.com'),
+    metadataBase: new URL('https://www.goldendev.vercel.app'),
     ...(noIndex && {
       robots: {
         index: false,
