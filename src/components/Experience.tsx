@@ -8,7 +8,7 @@ import { JobImages } from "@/components/JobImages";
 
 const jobs = [
     {
-        role: "Python Backend Development", // TODO: Replace with actual role
+        role: "Backend Development", // TODO: Replace with actual role
         company: "PDP Academy Inc.", // TODO: Replace with actual company name
         logo: "/pdp_academy.svg", // TODO: Replace with actual logo
         duration: "July 2023 - July 2024",
