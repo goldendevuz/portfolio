@@ -79,7 +79,7 @@ export default function Loading() {
                   </Card>
                 ))}
             </div>
-            {/* Work Experience Skeleton */}
+            {/* Work Education Skeleton */}
             <Skeleton className="h-8 w-[180px] mb-4" />
             <Card>
               <CardContent className="pt-6">
