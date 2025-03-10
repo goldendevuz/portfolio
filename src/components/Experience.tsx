@@ -1,54 +1,45 @@
 import Image from "next/image";
-
-import { CalendarDays } from "lucide-react";
-
+import { CalendarDays, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
 import { JobImages } from "@/components/JobImages";
 
 const jobs = [
     {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2020 - Present",
+        role: "Backend Development Intern (Python)",
+        company: "Udevs · Internship",
+        logo: "/u-devs.jpg",
+        duration: "Mar 2025 - Present · 1 mo",
+        location: "Lahore, Punjab, Pakistan - Remote",
         description:
-            "Lead developer for multiple high-impact projects, mentoring junior developers, and implementing best practices.",
-        link: "https://techinnovators.com",
+            "Working on backend development tasks, improving API performance, and collaborating on remote projects.",
+        link: "https://udevs.io",
         images: [],
+        extraInfo: "LinkedIn helped to get this job",
     },
     {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2018 - 2020",
+        role: "Founder & Leader | Goldendevs",
+        company: "Goldendevs · Self-employed",
+        logo: "/golden-devs.jpg",
+        duration: "Mar 2025 - Present · 1 mo",
+        location: "Kokand, Fergana region, Uzbekistan - On-site",
         description:
-            "Developed and maintained various client projects, focusing on responsive design and performance optimization.",
-        link: "https://websolutions.com",
-        images: [
-            "/devvault.png",
-            "/devvault.png",
-        ],
+            "Founded and lead Goldendevs, a volunteer-driven developer community that builds and launches MVP SaaS solutions. Empowering developers through hands-on projects and collaboration.",
+        skills: "Community building, Technical Leadership + 7 skills",
+        link: "https://goldendevs.com",
+        images: [],
+        logotwo: "/devuzcommnunity.jpg",
+        extraContent: {
+            title: "Signup for Goldendevs community",
+            description:
+                "Join Goldendevs, a volunteer-driven developer community focused on launching MVP SaaS solutions and hands-on collaborations. Sign up now to join our community journey.",
+        },
     },
-    {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2016 - 2018",
-        description:
-            "Assisted in the development of web applications, gained experience in agile methodologies and version control.",
-        link: "https://startupventures.com",
-        images: [
-            "/devvault.png",
-            "/devvault.png",
-        ],
-    },
-]
+];
 
 export const Experience = () => {
     return (
         <>
-           <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Work Experience</h2>
+            <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Work Experience</h2>
             <Card>
                 <CardContent className="pt-6">
                     <ul className="space-y-8">
@@ -64,31 +55,48 @@ export const Experience = () => {
                                         className="rounded-md border shadow-md object-cover"
                                     />
                                     <div>
-                                        <h3 className="font-semibold">
-                                            {j.role}
-                                        </h3>
-                                        <p className="text-sm text-muted-foreground">
-                                            {j.company}
-                                        </p>
+                                        <h3 className="font-semibold">{j.role}</h3>
+                                        <p className="text-sm text-muted-foreground">{j.company}</p>
                                     </div>
                                 </div>
                                 <p className="text-xs text-muted-foreground mt-2 flex items-center">
-                                    <CalendarDays className="size-3 mr-2"/>
+                                    <CalendarDays className="size-3 mr-2" />
                                     {j.duration}
                                 </p>
+                                {j.location && <p className="text-xs text-muted-foreground mt-1">{j.location}</p>}
+                                {j.extraInfo && (
+                                    <p className="text-xs text-muted-foreground mt-1 flex items-center">
+                                        <Linkedin className="size-3 mr-2" /> {j.extraInfo}
+                                    </p>
+                                )}
                                 <p className="text-sm mt-2">{j.description}</p>
+                                {j.skills && <p className="text-xs text-muted-foreground mt-1">{j.skills}</p>}
                                 {/* Job Images */}
-                                <JobImages 
-                                    role={j.role} 
-                                    link={j.link}
-                                    images={j.images} 
-                                    duration={j.duration} 
-                                />
+                                <JobImages role={j.role} link={j.link} images={j.images} duration={j.duration} />
+
+                                {/* Extra Content for Goldendevs */}
+                                {j.extraContent && (
+                                    <div className="mt-4 flex items-center space-x-4">
+                                        <Image
+                                            src={j.logotwo}
+                                            alt="Community"
+                                            width={80}
+                                            height={80}
+                                            className="rounded-md border shadow-md object-cover"
+                                        />
+                                        <div>
+                                            <h4 className="font-bold text-black dark:text-white">
+                                                {j.extraContent.title}
+                                            </h4>
+                                            <p className="text-sm text-muted-foreground">{j.extraContent.description}</p>
+                                        </div>
+                                    </div>
+                                )}
                             </li>
                         ))}
                     </ul>
                 </CardContent>
             </Card>
         </>
-    )
-}
+    );
+};
