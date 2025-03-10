@@ -52,7 +52,7 @@ export const Profile = () => {
                             <div className="flex flex-col items-start justify-center">
                                 <h1 className="font-bold md:mt-4 text-xl md:text-2xl">Yunusov Abdulmajid</h1>
                                 <p className="text-sm md:text-base text-muted-foreground">
-                                    Python Backend Engineer
+                                    Python Backend Developer
                                 </p>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ export const Profile = () => {
                     </div>
 
                     <p className="mt-2 text-start text-sm text-muted-foreground">
-                    I am a 20 y.o Python Engineer with a passion for building products that help other developers.
+                    I am a 20 y.o Python Developer with a passion for building products that help other developers.
                     </p>
                     <Button className="mt-3 w-full" asChild>
                         {/* TODO: Add resume */}

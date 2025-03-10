@@ -36,12 +36,12 @@ export const projects = [
         tech: "Python",
         link: "https://github.com/goldendevuz/personal-blog.git",
     },
-    {
-        title: "Weather API",
-        description: "weather app to check the weather forecast for any location.",
-        tech: "Python",
-        link: "https://github.com/goldendevuz/weather-api-wrapper-service.git",
-    },
+    // {
+    //     title: "Weather API",
+    //     description: "weather app to check the weather forecast for any location.",
+    //     tech: "Python",
+    //     link: "https://github.com/goldendevuz/weather-api-wrapper-service.git",
+    // },
     {
         title: "Blogging Platform API",
         description: "RESTful API for a personal blogging platform",
