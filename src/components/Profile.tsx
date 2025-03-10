@@ -66,7 +66,7 @@ export const Profile = () => {
                         {/* TODO: Add resume */}
                         {/* TODO: Add link to schedule a call with you using Calendly or Cal */}
                         <Link
-                            href="https://shorturl.at/1X6lz"
+                            href="/Profile.pdf"
                             target="_blank"
                             className="font-semibold uppercase"
                         >
