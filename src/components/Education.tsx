@@ -24,7 +24,7 @@ const jobs = [
 export const Education = () => {
     return (
         <>
-           <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Education</h2>
+           <h2 className="text-xl font-bold mb-4 mt-3 text-black dark:text-white">Education</h2>
             <Card>
                 <CardContent className="pt-6">
                     <ul className="space-y-8">
