@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import { CalendarDays, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { JobImages } from "@/components/JobImages";
@@ -12,7 +14,7 @@ const jobs = [
         location: "Lahore, Punjab, Pakistan - Remote",
         description:
             "Working on backend development tasks, improving API performance, and collaborating on remote projects.",
-        link: "https://udevs.io",
+        link: "https://www.linkedin.com/company/udevs-software-house/",
         images: [],
         extraInfo: "LinkedIn helped to get this job",
     },
@@ -25,11 +27,12 @@ const jobs = [
         description:
             "Founded and lead Goldendevs, a volunteer-driven developer community that builds and launches MVP SaaS solutions. Empowering developers through hands-on projects and collaboration.",
         skills: "Community building, Technical Leadership + 7 skills",
-        link: "https://goldendevs.com",
+        link: "https://www.linkedin.com/company/goldendevs/",
         images: [],
         logotwo: "/devuzcommnunity.jpg",
         extraContent: {
             title: "Signup for Goldendevs community",
+            link: "https://www.linkedin.com/company/goldendevs/jobs/",
             description:
                 "Join Goldendevs, a volunteer-driven developer community focused on launching MVP SaaS solutions and hands-on collaborations. Sign up now to join our community journey.",
         },
@@ -47,13 +50,18 @@ export const Experience = () => {
                             <li key={i} className="border-b last:border-b-0 pb-8 last:pb-0">
                                 {/* Job Details */}
                                 <div className="flex items-center space-x-4">
-                                    <Image
-                                        src={j.logo}
-                                        alt={j.company}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-md border shadow-md object-cover"
-                                    />
+                                    <Link
+                                        href={j.link}
+                                        target="_blank"
+                                    >
+                                        <Image
+                                            src={j.logo}
+                                            alt={j.company}
+                                            width={40}
+                                            height={40}
+                                            className="rounded-md border shadow-md object-cover"
+                                        />
+                                    </Link>
                                     <div>
                                         <h3 className="font-semibold">{j.role}</h3>
                                         <p className="text-sm text-muted-foreground">{j.company}</p>
@@ -77,18 +85,33 @@ export const Experience = () => {
                                 {/* Extra Content for Goldendevs */}
                                 {j.extraContent && (
                                     <div className="mt-4 flex items-center space-x-4">
-                                        <Image
-                                            src={j.logotwo}
-                                            alt="Community"
-                                            width={80}
-                                            height={80}
-                                            className="rounded-md border shadow-md object-cover"
-                                        />
+                                        {j.logotwo && (
+                                            <Link
+                                                href={j.link}
+                                                target="_blank"
+                                            >
+                                                <Image
+                                                    src={j.logotwo}
+                                                    alt="Community"
+                                                    width={80}
+                                                    height={80}
+                                                    className="rounded-md border shadow-md object-cover"
+                                                />
+                                            </Link>
+                                        )}
                                         <div>
-                                            <h4 className="font-bold text-black dark:text-white">
-                                                {j.extraContent.title}
-                                            </h4>
-                                            <p className="text-sm text-muted-foreground">{j.extraContent.description}</p>
+                                            {j.extraContent.title && (
+                                                <Link href={j.extraContent.link ?? "#"} target="_blank">
+                                                    <h4 className="font-bold text-black dark:text-white">
+                                                        {j.extraContent.title}
+                                                    </h4>
+                                                </Link>
+                                            )}
+                                            {j.extraContent.description && (
+                                                <p className="text-sm text-muted-foreground">
+                                                    {j.extraContent.description}
+                                                </p>
+                                            )}
                                         </div>
                                     </div>
                                 )}

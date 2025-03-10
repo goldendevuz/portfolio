@@ -154,6 +154,7 @@ export const Projects = () => {
                                     </div>
                                     <Link
                                         href={p.link}
+                                        target="_blank"
                                         className="flex items-center gap-2 text-sm text-primary hover:underline"
                                     >
                                         View Project
