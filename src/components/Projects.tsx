@@ -48,6 +48,12 @@ export const projects = [
         tech: "Python",
         link: "https://github.com/goldendevuz/blogging-platform-api.git",
     },
+    {
+        title: "Todo List API",
+        description: "RESTful API to allow users to manage their to-do list.",
+        tech: "Python",
+        link: "https://github.com/goldendevuz/todo-list-api.git",
+    },
 
     // {
     //     title: "Portfolio Website",
